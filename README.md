@@ -13,5 +13,14 @@ http://0.0.0.0:8001/
 ```
 ![Octocat](php-myadmin.png "php-myadmin") 
 ![Octocat](login-to-db.png "php-myadmin-login") 
+3-volums<br>
+I create database using phpmyamin container.We all know once the container removed we lose all data <br>
+to solve this we create volumes to map the  database from outside the container to the entiry point of the container
+```yaml
+ volumes:
+      - "./db:/docker-entrypoint-initdb.d" 
+```
+
+
 
 
